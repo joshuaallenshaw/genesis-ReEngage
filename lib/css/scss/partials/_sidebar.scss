@@ -1,0 +1,28 @@
+// Sidebar
+
+.sidebar {
+	font-size: 16px;
+	line-height: 1.5;
+
+	.widget {
+		margin-bottom: 40px;
+	}
+
+	p {
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+
+	// Sidebar
+	
+	.sidebar {
+		float: right;
+		width: 30%;
+	}
+
+	.sidebar-content .sidebar {
+		float: left;
+	}
+}

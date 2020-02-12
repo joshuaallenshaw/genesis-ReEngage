@@ -1,11 +1,11 @@
 <?php
 /**
- * Genesis Sample Simple Social Icons default settings.
+ * Genesis ReEngage Simple Social Icons default settings.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Genesis ReEngage
+ * @author  Joshua Allen Shaw
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
 return [

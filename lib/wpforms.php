@@ -52,7 +52,7 @@ function studiopress_maybe_create_wpforms_form() { // phpcs:ignore -- studiopres
 
 	// Creates a form using the WPForms 'contact' template.
 	$new_form_id = wpforms()->form->add(
-		esc_html__( 'Simple Contact Form', 'genesis-sample' ),
+		esc_html__( 'Simple Contact Form', 'genesis-reengage' ),
 		[],
 		[
 			'template' => 'contact',
@@ -72,7 +72,7 @@ function studiopress_maybe_create_wpforms_form() { // phpcs:ignore -- studiopres
  *
  * @since 2.10.0
  *
- * @param array $content The content config.
+ * @param array $content        The content config.
  * @param array $imported_posts Imported posts with content short name as keys and IDs as values.
  */
 function studiopress_insert_contact_form( $content, $imported_posts ) { // phpcs:ignore -- studiopress prefix for functions shared between themes.

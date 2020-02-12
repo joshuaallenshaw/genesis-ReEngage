@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * Genesis ReEngage child theme.
  *
  * Post type supports.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Genesis ReEngage
+ * @author  Joshua Allen Shaw
  * @license GPL-2.0-or-later
- * @link    https://my.studiopress.com/themes/genesis-sample/
+ * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
 return [

@@ -39,8 +39,7 @@ dl {
 	max-width: none;
 }
 
-/* Alignment
----------------------------------------------------------------------------- */
+// Alignment
 
 .has-text-align-center {
 	text-align: center;
@@ -54,8 +53,7 @@ dl {
 	text-align: right;
 }
 
-/* Typography
----------------------------------------------------------------------------- */
+// Typography
 
 a {
 	color: #0073e5;
@@ -132,8 +130,7 @@ p.has-small-font-size.has-drop-cap:not(:focus)::first-letter {
 	margin-right: 0.01em;
 }
 
-/* Background Color
----------------------------------------------------------------------------- */
+// Background Color
 
 p.has-background {
 	padding: 25px 30px;
@@ -166,8 +163,7 @@ p.has-background.light-text a:hover {
 	text-decoration: none;
 }
 
-/* Blockquotes and captions
----------------------------------------------------------------------------- */
+// Blockquotes and captions
 
 .wp-block-pullquote,
 .wp-block-quote {
@@ -263,24 +259,21 @@ figcaption {
 	text-align: center;
 }
 
-/* Cover Image
----------------------------------------------------------------------------- */
+// Cover Image
 
 .wp-block-cover .wp-block-cover-text {
 	color: #fff;
 	font-size: 48px;
 }
 
-/* Lists
----------------------------------------------------------------------------- */
+// Lists
 
 .editor-block-list__block li {
 	line-height: 1.625;
 	margin-bottom: 0;
 }
 
-/* Preformatted elements
----------------------------------------------------------------------------- */
+// Preformatted elements
 
 .wp-block-preformatted pre,
 .wp-block-verse pre {
@@ -289,8 +282,7 @@ figcaption {
 	line-height: 1.625 !important;
 }
 
-/* Separators
----------------------------------------------------------------------------- */
+// Separators
 
 hr.wp-block-separator {
 	border: none;
@@ -308,8 +300,7 @@ hr.wp-block-separator.is-style-dots {
 	color: #333;
 }
 
-/* Tables
----------------------------------------------------------------------------- */
+// Tables
 
 table {
 	width: 100%;
@@ -317,37 +308,34 @@ table {
 
 .wp-block-table {
 	line-height: 2;
-}
 
-.wp-block-table td,
-.wp-block-table th,
-.wp-block-table tr {
-	border: none;
-	vertical-align: top;
-}
+	td,	th, tr {
+		border: none;
+		vertical-align: top;
+	}
 
-.wp-block-table th {
-	font-weight: 600;
-}
+	th {
+		font-weight: 600;
+	}
 
-.wp-block-table tr {
-	border-top: 1px solid #eee;
-}
+	tr {
+		border-top: 1px solid #eee;
+	}
 
-.wp-block-table tr:last-of-type {
-	border-bottom: 1px solid #eee;
-}
+	tr:last-of-type {
+		border-bottom: 1px solid #eee;
+	}
 
-.wp-block-table tbody {
-	border-bottom: 1px solid #eee;
+	tbody {
+		border-bottom: 1px solid #eee;
+	}
 }
 
 .wp-block-table.is-style-stripes {
 	border-bottom-width: 0;
 }
 
-/* Buttons
----------------------------------------------------------------------------- */
+// Buttons
 
 .ab-block-cta .ab-button {
 	font-family: "Source Sans Pro", sans-serif;
@@ -381,15 +369,13 @@ table {
 	box-shadow: inset 0 0 200px rgba(230, 230, 230, 0.15);
 }
 
-/* Galleries
----------------------------------------------------------------------------- */
+// Galleries
 
 .wp-block-gallery .blocks-gallery-item {
 	margin-bottom: 16px;
 }
 
-/* Category Block
----------------------------------------------------------------------------- */
+// Category Block
 
 .wp-block-categories ul {
 	margin-left: 0;
@@ -408,16 +394,15 @@ table {
 	padding: 0 30px;
 }
 
-/* Latest Posts Block
----------------------------------------------------------------------------- */
+// Latest Posts Block
 
 .wp-block-latest-posts {
 	margin-left: 0;
 	padding-left: 0;
-}
 
-.wp-block-latest-posts li {
-	list-style-type: none;
+	li {
+		list-style-type: none;
+	}
 }
 
 .wp-block[data-align="center"] .wp-block-latest-posts {

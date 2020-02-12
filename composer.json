@@ -1,13 +1,12 @@
 {
-	"name": "studiopress/genesis-sample",
+	"name": "joshuaallenshaw/genesis-reengage",
 	"type": "wordpress-theme",
-	"description": "Genesis Sample child theme for the Genesis Framework",
-	"homepage": "https://github.com/studiopress/genesis-sample",
+	"description": "Genesis ReEngage child theme for the Genesis Framework",
+	"homepage": "https://github.com/joshuaallenshaw/genesis-ReEngage",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
-			"name": "StudioPress",
-			"email": "support@studiopress.com"
+			"name": "Joshua Allen Shaw"
 		}
 	],
 	"require": {
@@ -30,7 +29,6 @@
 		"phpcbf": "phpcbf"
 	},
 	"support": {
-		"issues": "https://github.com/studiopress/genesis-sample/issues",
-		"source": "https://github.com/studiopress/genesis-sample"
+		"source": "https://github.com/joshuaallenshaw/genesis-ReEngage"
 	}
 }

@@ -1,37 +1,37 @@
 <?php
 /**
- * Genesis Sample.
+ * Genesis ReEngage.
  *
  * Onboarding config shared between Starter Packs.
  *
  * Genesis Starter Packs give you a choice of content variation when activating
  * the theme. The content below is common to all packs for this theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Genesis ReEngage
+ * @author  Joshua Allen Shaw
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
 return [
 	'plugins'          => [
 		[
-			'name'       => __( 'Atomic Blocks', 'genesis-sample' ),
+			'name'       => __( 'Atomic Blocks', 'genesis-reengage' ),
 			'slug'       => 'atomic-blocks/atomicblocks.php',
 			'public_url' => 'https://atomicblocks.com/',
 		],
 		[
-			'name'       => __( 'Simple Social Icons', 'genesis-sample' ),
+			'name'       => __( 'Simple Social Icons', 'genesis-reengage' ),
 			'slug'       => 'simple-social-icons/simple-social-icons.php',
 			'public_url' => 'https://wordpress.org/plugins/simple-social-icons/',
 		],
 		[
-			'name'       => __( 'Genesis eNews Extended (Third Party)', 'genesis-sample' ),
+			'name'       => __( 'Genesis eNews Extended (Third Party)', 'genesis-reengage' ),
 			'slug'       => 'genesis-enews-extended/plugin.php',
 			'public_url' => 'https://wordpress.org/plugins/genesis-enews-extended/',
 		],
 		[
-			'name'       => __( 'WPForms Lite (Third Party)', 'genesis-sample' ),
+			'name'       => __( 'WPForms Lite (Third Party)', 'genesis-reengage' ),
 			'slug'       => 'wpforms-lite/wpforms.php',
 			'public_url' => 'https://wordpress.org/plugins/wpforms-lite/',
 		],
@@ -39,7 +39,7 @@ return [
 	'content'          => [
 		'blocks'  => [
 			'post_title'     => 'Block Content Examples',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/block-examples.php',
+			'post_content'   => include dirname( __FILE__ ) . '/import/content/block-examples.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
@@ -48,7 +48,7 @@ return [
 		],
 		'about'   => [
 			'post_title'     => 'About Us',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/about.php',
+			'post_content'   => include dirname( __FILE__ ) . '/import/content/about.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
 			'featured_image' => CHILD_URL . '/config/import/images/about.jpg',
@@ -61,7 +61,7 @@ return [
 		],
 		'contact' => [
 			'post_title'     => 'Contact Us',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/contact.php',
+			'post_content'   => include dirname( __FILE__ ) . '/import/content/contact.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
 			'comment_status' => 'closed',
@@ -69,7 +69,7 @@ return [
 		],
 		'landing' => [
 			'post_title'     => 'Landing Page',
-			'post_content'   => require dirname( __FILE__ ) . '/import/content/landing-page.php',
+			'post_content'   => include dirname( __FILE__ ) . '/import/content/landing-page.php',
 			'post_type'      => 'page',
 			'post_status'    => 'publish',
 			'page_template'  => 'page-templates/landing.php',

@@ -9,15 +9,14 @@ const wpi18n = require('node-wp-i18n');
 console.log(chalk`{cyan Making pot file}...`);
 
 wpi18n.makepot(
-	{
-		domainPath: 'languages',
-		potHeaders: {
-			'poedit': true,
-			'x-poedit-basepath': '..',
-			'report-msgid-bugs-to': 'StudioPress <translations@studiopress.com>'
-		}
-	}
+    {
+        domainPath: 'languages',
+        potHeaders: {
+            'poedit': true,
+            'x-poedit-basepath': '..'
+        }
+    }
 ).then(
-	(result) => console.log(chalk`{cyan Pot file updated at {bold ${result.domainPath}/${result.potFile}}}`),
-	(err) => console.log(chalk`{red ${err}}`)
+    (result) => console.log(chalk`{cyan Pot file updated at {bold ${result.domainPath}/${result.potFile}}}`),
+    (err) => console.log(chalk`{red ${err}}`)
 );
