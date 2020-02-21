@@ -30,6 +30,7 @@ return [
 		'image_alignment'           => 'aligncenter',
 		'posts_nav'                 => 'numeric',
 		'site_layout'               => 'content-sidebar',
+		'show_featured_image_post'  => 1,
 	],
 	'posts_per_page'       => 6,
 ];

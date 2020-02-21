@@ -18,6 +18,6 @@ return [
 		],
 	],
 	'extras' => [
-		'media_query_width' => '960px',
+		'media_query_width' => '760px',
 	],
 ];

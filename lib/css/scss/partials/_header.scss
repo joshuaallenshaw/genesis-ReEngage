@@ -12,19 +12,18 @@
 	
 }
 
-.custom-header#hdr-img {
+.header-image#hdr-img {
 	
 	min-height: 300px;
-	background-size:cover; 
-	background-position: center bottom;
+	background-size:cover; 	
 }
 
 // Title Area
 
 .title-area {
 	float: left;
-	padding-bottom: 25px;
-	padding-top: 25px;
+	padding-bottom: 5px;
+	padding-top: 15px;
 }
 
 .wp-custom-logo {
@@ -56,7 +55,14 @@
 	}
 }
 
-.site-description,
+.site-description {
+	padding-bottom: 10px;
+	font-size: 14px;
+	text-transform: uppercase;
+	overflow: hidden;
+	position: absolute !important;
+	word-wrap: normal !important;
+}
 .wp-custom-logo .site-title {
 	border: 0;
 	clip: rect(0, 0, 0, 0);

@@ -10,6 +10,8 @@
  * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
+
+
 // Repositions primary navigation menu.
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'genesis_do_nav', 12 );
@@ -37,28 +39,14 @@ add_filter( 'genesis_custom_header_defaults','set_genesis_custom_header_defaults
 */
 function genesis_reengage_add_header_div() {
 	if ( get_header_image() ) {
-		echo '<div class=\'custom-header\' id=\'hdr-img\'></div>';
+		echo '<div class=\'header-image\' id=\'hdr-img\'></div>';
 	}
 }
 add_action('genesis_after_header', 'genesis_reengage_add_header_div');
-// This works, but the image alignment still needs work... and possibly the post background.
-
 
 /**
- * Configure custom header
+ * Configure custom header and colors.
  */
 function genesis_reengage_header_style_callback() {
-
-	$header_image = get_header_image();
-	if ( empty( $header_image ) ) {
-		return;
-	}
-
-	$header_selector = '.custom-header';
-
-	printf( '<style type="text/css">%s {background: url(%s) no-repeat; }</style>', $header_selector, $header_image );
+	//Does nothing but prevent the Genesis Style from applying.
 }
-
-//TODO Try moving background image with custom header support 'header selector'
-//TODO Will need to use cusomter-header instead of genesis-custom-hearer with a custom callback function to make it work.
-//TODO Sticky Setting is applied to entire header

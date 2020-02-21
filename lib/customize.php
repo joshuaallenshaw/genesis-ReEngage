@@ -23,7 +23,7 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_reengage_link_color',
 		[
-			'default'           => $appearance['default-colors']['link'],
+			'default'           => $appearance['default-values']['link'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		]
 	);
@@ -44,7 +44,7 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_reengage_accent_color',
 		[
-			'default'           => $appearance['default-colors']['accent'],
+			'default'           => $appearance['default-values']['accent'],
 			'sanitize_callback' => 'sanitize_hex_color',
 		]
 	);
@@ -58,6 +58,26 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 				'label'       => __( 'Accent Color', 'genesis-reengage' ),
 				'section'     => 'colors',
 				'settings'    => 'genesis_reengage_accent_color',
+			]
+		)
+	);
+
+	$wp_customize->add_setting(
+		'genesis_reengage_background_color',
+		[
+			'sanitize_callback' => 'sanitize_hex_color',
+		]
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'genesis_reengage_background_color',
+			[
+				'description' => __( 'Change the default background color.', 'genesis-reengage' ),
+				'label'       => __( 'Background Color', 'genesis-reengage' ),
+				'section'     => 'colors',
+				'settings'    => 'genesis_reengage_background_color',
 			]
 		)
 	);
@@ -91,7 +111,7 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_reengage_header_width',
 		[
-			'default'	=> $appearance['header_width'],
+			'default'	=> $appearance['default-values']['header_width'],
 			'transport' => 'refresh',
 		]
 	);
@@ -110,6 +130,38 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 			]
 		]
 	);
+
+	$wp_customize->add_setting(
+		'genesis_reengage_header_position',
+		[
+			'default'	 => $appearance['default-values']['header_position'],
+			'transport'  => 'refresh',
+		]
+
+	);
+
+	// Add a control for the header position.
+	$wp_customize->add_control(
+		'genesis_reengage_header_position',
+		[
+			'label'		  => __( 'Header Position', 'genesis-reengage' ),
+			'description' => __( 'Set the position alignment of the header image', 'genesis-reengage' ),
+			'section'	  => 'header_image',
+			'type'		  => 'radio',
+			'choices'	  => [
+				'left-top'      => __( 'Left Top', 'genesis-reengage' ),
+				'left-center'   => __( 'Left Center', 'genesis-reengage' ),
+				'left-bottom'   => __( 'Left Bottom', 'genesis-reengage' ),
+				'right-top'     => __( 'Right Top', 'genesis-reengage' ),
+				'right-center'  => __( 'Right Center', 'genesis-reengage' ),
+				'right-bottom'  => __( 'Right Bottom', 'genesis-reengage' ),
+				'center-top'    => __( 'Center Top', 'genesis-reengage' ),
+				'center-center' => __( 'Center Center', 'genesis-reengage' ),
+				'center-bottom' => __( 'Center Bottom', 'genesis-reengage' ),
+			]
+		]
+	);
+
 }
 
 /**

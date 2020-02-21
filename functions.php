@@ -26,7 +26,7 @@ function genesis_reengage_setup() {
 	include_once get_stylesheet_directory() . '/lib/customize.php';
 
 	// Includes Customizer CSS.
-	include_once get_stylesheet_directory() . '/lib/output.php';
+	include_once get_stylesheet_directory() . '/lib/inline-css.php';
 
 	// Adds WooCommerce support.
 	include_once get_stylesheet_directory() . '/lib/woocommerce/woocommerce-setup.php';
