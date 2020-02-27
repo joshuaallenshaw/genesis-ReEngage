@@ -18,13 +18,8 @@ function genesis_reengage_custom_gutenberg_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: {$appearance['link-color']};
-}
-
-.site-container .wp-block-button .wp-block-button__link {
-	background-color: {$appearance['link-color']};
-}
+.ab-block-post-grid .ab-post-grid-items h2 a:hover { color: {$appearance['link-color']}; }
+.site-container .wp-block-button .wp-block-button__link { background-color: {$appearance['link-color']}; }
 
 .wp-block-button .wp-block-button__link:not(.has-background),
 .wp-block-button .wp-block-button__link:not(.has-background):focus,

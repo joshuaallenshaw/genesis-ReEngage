@@ -15,7 +15,7 @@ function genesis_reengage_setup() {
 
 	// Cleanup tasks.
 	include_once get_stylesheet_directory() . '/lib/cleanup.php';
-	
+
 	// Sets up the Theme.
 	include_once get_stylesheet_directory() . '/lib/header.php';
 
@@ -49,7 +49,7 @@ function genesis_reengage_setup() {
 }
 add_action( 'genesis_setup', 'genesis_reengage_setup', 15 );
 
- /**
+/**
  * Set Simple Social Icon defaults.
  *
  * @since 1.0.0

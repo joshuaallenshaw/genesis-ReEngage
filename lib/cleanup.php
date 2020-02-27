@@ -1,8 +1,8 @@
 <?php
 /**
  * Genesis ReEngage Theme.
- * 
- * Cleanup wordpress and genesis.
+ *
+ * Cleanup WordPress and genesis.
  *
  * @package ReEngage
  * @author  Joshua Allen Shaw
@@ -45,7 +45,7 @@ function genesis_reengage_dont_update_theme( $r, $url ) {
 	$themes = json_decode( $r['body']['themes'] );
 	$child  = get_option( 'stylesheet' );
 	unset( $themes->themes->$child );
-	$r['body']['themes'] = json_encode( $themes );
+	$r['body']['themes'] = wp_json_encode( $themes );
 	return $r;
 }
 add_filter( 'http_request_args', 'genesis_reengage_dont_update_theme', 5, 2 );
@@ -53,7 +53,7 @@ add_filter( 'http_request_args', 'genesis_reengage_dont_update_theme', 5, 2 );
 /**
  * Dequeue jQuery Migrate
  *
- * @param array &$scripts Existing scripts
+ * @param array $scripts Existing scripts.
  */
 function genesis_reengage_dequeue_jquery_migrate( &$scripts ) {
 	if ( ! is_admin() ) {
@@ -83,7 +83,7 @@ add_filter( 'get_the_archive_title', 'genesis_reengage_archive_title_remove_pref
  * Remove old tempates.
  *
  * @param array $page_templates Page Templates.
- * @return array Page Templates.
+ * @return array $page_templates.
  */
 function genesis_reengage_remove_genesis_templates( $page_templates ) {
 	unset( $page_templates['page_archive.php'] );
@@ -95,11 +95,11 @@ add_filter( 'theme_page_templates', 'genesis_reengage_remove_genesis_templates' 
 /**
  * Remove avatars from comment list
  *
- * @param string $avatar avatar
- * @return string $avatar empty avatar
+ * @param string $avatar avatar.
+ * @return string $avatar empty avatar.
  */
 function genesis_reengage_remove_avatars_from_comments( $avatar ) {
 	global $in_comment_loop;
 	return $in_comment_loop ? '' : $avatar;
 }
-// add_filter( 'get_avatar', 'genesis_reengage_remove_avatars_from_comments' );
+// add_filter( 'get_avatar', 'genesis_reengage_remove_avatars_from_comments' );.

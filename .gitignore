@@ -3,4 +3,5 @@
 /phpcs.xml
 node_modules/
 vendor/
-/package-lock.json
+package-lock.json
+genesis-reengage.3.2.0.zip

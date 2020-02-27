@@ -14,7 +14,7 @@ $genesis_reengage_shared_content = genesis_get_config( 'onboarding-shared' );
 
 return [
 	'starter_packs' => [
-		'default'       => [
+		'default' => [
 			'title'       => __( 'Color', 'genesis-reengage' ),
 			'description' => __( 'A pack with a homepage designed with color images.', 'genesis-reengage' ),
 			'thumbnail'   => get_stylesheet_directory_uri() . '/config/import/images/thumbnails/home-color.jpg',

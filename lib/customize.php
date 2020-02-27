@@ -111,7 +111,7 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'genesis_reengage_header_width',
 		[
-			'default'	=> $appearance['default-values']['header_width'],
+			'default'   => $appearance['default-values']['header_width'],
 			'transport' => 'refresh',
 		]
 	);
@@ -120,35 +120,34 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 	$wp_customize->add_control(
 		'genesis_reengage_header_width',
 		[
-			'label'		  => __( 'Header Width', 'genesis-reengage' ),
+			'label'       => __( 'Header Width', 'genesis-reengage' ),
 			'description' => __( 'Set the width of the header image and menu', 'genesis-reengage' ),
-			'section'	  => 'header_image',
-			'type'		  => 'select',
-			'choices'	  => [
-				'content' => __( 'Content', 'genesis-reengage' ),
-				'full_width' => __( 'Full Width', 'genesis_reengage' )
-			]
+			'section'     => 'header_image',
+			'type'        => 'select',
+			'choices'     => [
+				'content'    => __( 'Content', 'genesis-reengage' ),
+				'full_width' => __( 'Full Width', 'genesis-reengage' ),
+			],
 		]
 	);
 
 	$wp_customize->add_setting(
 		'genesis_reengage_header_position',
 		[
-			'default'	 => $appearance['default-values']['header_position'],
-			'transport'  => 'refresh',
+			'default'   => $appearance['default-values']['header_position'],
+			'transport' => 'refresh',
 		]
-
 	);
 
 	// Add a control for the header position.
 	$wp_customize->add_control(
 		'genesis_reengage_header_position',
 		[
-			'label'		  => __( 'Header Position', 'genesis-reengage' ),
+			'label'       => __( 'Header Position', 'genesis-reengage' ),
 			'description' => __( 'Set the position alignment of the header image', 'genesis-reengage' ),
-			'section'	  => 'header_image',
-			'type'		  => 'radio',
-			'choices'	  => [
+			'section'     => 'header_image',
+			'type'        => 'radio',
+			'choices'     => [
 				'left-top'      => __( 'Left Top', 'genesis-reengage' ),
 				'left-center'   => __( 'Left Center', 'genesis-reengage' ),
 				'left-bottom'   => __( 'Left Bottom', 'genesis-reengage' ),
@@ -158,7 +157,7 @@ function genesis_reengage_customizer_register( $wp_customize ) {
 				'center-top'    => __( 'Center Top', 'genesis-reengage' ),
 				'center-center' => __( 'Center Center', 'genesis-reengage' ),
 				'center-bottom' => __( 'Center Bottom', 'genesis-reengage' ),
-			]
+			],
 		]
 	);
 

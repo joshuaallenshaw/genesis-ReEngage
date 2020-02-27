@@ -10,7 +10,7 @@
  * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
-add_action( 'wp_enqueue_scripts', 'genesis_reengage_css');
+add_action( 'wp_enqueue_scripts', 'genesis_reengage_css' );
 /**
  * Checks the settings for the link color, and accent color.
  * If any of these value are set the appropriate CSS is output.
@@ -20,12 +20,12 @@ add_action( 'wp_enqueue_scripts', 'genesis_reengage_css');
 function genesis_reengage_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
-	$color_link   		= get_theme_mod( 'genesis_reengage_link_color', $appearance['default-values']['link'] );
-	$color_accent 		= get_theme_mod( 'genesis_reengage_accent_color', $appearance['default-values']['accent'] );
-	$header_textcolor 	= $appearance['header-text-color'];
-	$background_color 	= $appearance['background-color'];
-	$logo         		= wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
-	$header_image 		= get_header_image();
+	$color_link       = get_theme_mod( 'genesis_reengage_link_color', $appearance['default-values']['link'] );
+	$color_accent     = get_theme_mod( 'genesis_reengage_accent_color', $appearance['default-values']['accent'] );
+	$header_textcolor = $appearance['header-text-color'];
+	$background_color = $appearance['background-color'];
+	$logo             = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+	$header_image     = get_header_image();
 
 	if ( $logo ) {
 		$logo_height           = absint( $logo[2] );
@@ -37,7 +37,7 @@ function genesis_reengage_css() {
 	}
 
 	$css = '';
-	
+
 	// Header Text Color.
 	$css .= ( $header_textcolor ) ? sprintf(
 		'.site-title a, .site-title a:hover, .site-title a:focus, .site-description, .nav-primary a {
@@ -45,7 +45,7 @@ function genesis_reengage_css() {
 		} ',
 		$header_textcolor
 	) : '';
-	
+
 	// Link Color.
 	$css .= ( $appearance['default-values']['link'] !== $color_link ) ? sprintf(
 		'a, .entry-title a:focus, .entry-title a:hover, .genesis-nav-menu a:focus, .genesis-nav-menu a:hover,
@@ -56,14 +56,14 @@ function genesis_reengage_css() {
 		} ',
 		$color_link
 	) : '';
-	
+
 	// Background Color.
 	$css .= ( $background_color ) ? sprintf(
 		'body, .site-header .wrap, .footer-widgets, .site-footer {
 			background-color: %s;
 		} ',
 		$background_color
-	 ) : '';
+	) : '';
 	// Accent Color.
 	$css .= ( $appearance['default-values']['accent'] !== $color_accent ) ? sprintf(
 		'button:focus, button:hover, input[type="button"]:focus, input[type="button"]:hover,
@@ -131,18 +131,18 @@ function genesis_reengage_css() {
 		} ',
 		$logo_padding + 5
 	) : '';
-	
+
 	// Custom Header.
-	$css .= (has_custom_header()) ? sprintf( 
+	$css .= ( has_custom_header() ) ? sprintf(
 		'.header-image {
 			background: url(%s) no-repeat; 
 			background-position: %s;
 		}
-		', 
-		$header_image, 
+		',
+		$header_image,
 		str_replace( '-', ' ', $appearance['header-position'] )
 	) : '';
-	
+
 	if ( $css ) {
 		wp_add_inline_style( genesis_get_theme_handle() . '-main', $css );
 	}

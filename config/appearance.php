@@ -9,13 +9,13 @@
  */
 
 $genesis_reengage_default_values = [
-	'link'   				=> '#0073e5',
-	'accent' 				=> '#0073e5',
-	'header-width'			=> 'content',
+	'link'                  => '#0073e5',
+	'accent'                => '#0073e5',
+	'header-width'          => 'content',
 	'header-image-position' => 'center-center',
-	'text'					=> '#333',
-	'background'			=> '#fff',
-	];
+	'text'                  => '#333',
+	'background'            => '#fff',
+];
 
 $genesis_reengage_link_color = get_theme_mod(
 	'genesis_reengage_link_color',
@@ -28,13 +28,13 @@ $genesis_reengage_accent_color = get_theme_mod(
 );
 
 // Hack.
-// Could get_theme_mod was not returning header_textcolor.
-$hdrtxtclr = get_header_textcolor();
-$genesis_reengage_header_text_color = ($hdrtxtclr) ? '#' . $hdrtxtclr : $genesis_reengage_default_values['text'];
-/** 
+// get_theme_mod was not returning header_textcolor.
+$genesis_reengage_hdrtxtclr         = get_header_textcolor();
+$genesis_reengage_header_text_color = ( $genesis_reengage_hdrtxtclr ) ? '#' . $hdrtxtclr : $genesis_reengage_default_values['text'];
+/**
 * $genesis_reengage_header_text_color = get_theme_mod(
-* 	'header_textcolor',
-*	$genesis_reengage_default_values['text']
+*   'header_textcolor',
+*   $genesis_reengage_default_values['text']
 *);
  */
 $genesis_reengage_background_color = get_theme_mod(
@@ -42,13 +42,15 @@ $genesis_reengage_background_color = get_theme_mod(
 	$genesis_reengage_default_values['background']
 );
 
-$genesis_reengage_header_width = get_theme_mod(	
-	'genesis_reengage_header_width', 
-	$genesis_reengage_default_values['header-width'] );
+$genesis_reengage_header_width = get_theme_mod(
+	'genesis_reengage_header_width',
+	$genesis_reengage_default_values['header-width']
+);
 
 $genesis_reengage_header_position = get_theme_mod(
-	'genesis_reengage_header_position', 
-	$genesis_reengage_default_values['header-image-position'] );
+	'genesis_reengage_header_position',
+	$genesis_reengage_default_values['header-image-position']
+);
 
 $genesis_reengage_link_color_contrast   = genesis_reengage_color_contrast( $genesis_reengage_link_color );
 $genesis_reengage_link_color_brightness = genesis_reengage_color_brightness( $genesis_reengage_link_color, 35 );
@@ -56,14 +58,14 @@ $genesis_reengage_link_color_brightness = genesis_reengage_color_brightness( $ge
 return [
 	'fonts-url'            => 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap',
 	'content-width'        => 1062,
-	'header-width'		   => $genesis_reengage_header_width,
-	'header-position'	   => $genesis_reengage_header_position,
-	'header-text-color'	   => $genesis_reengage_header_text_color,
+	'header-width'         => $genesis_reengage_header_width,
+	'header-position'      => $genesis_reengage_header_position,
+	'header-text-color'    => $genesis_reengage_header_text_color,
 	'button-bg'            => $genesis_reengage_link_color,
 	'button-color'         => $genesis_reengage_link_color_contrast,
 	'button-outline-hover' => $genesis_reengage_link_color_brightness,
 	'link-color'           => $genesis_reengage_link_color,
-	'background-color'	   => $genesis_reengage_background_color,
+	'background-color'     => $genesis_reengage_background_color,
 	'default-values'       => $genesis_reengage_default_values,
 	'editor-color-palette' => [
 		[

@@ -11,7 +11,7 @@
 return [
 
 	/*
-	 'genesis-custom-logo'             => [
+	'genesis-custom-logo'             => [
 		'height'      => 120,
 		'width'       => 700,
 		'flex-height' => true,
