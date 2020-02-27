@@ -1,11 +1,11 @@
 <?php
 /**
- * Genesis Sample child theme.
+ * Genesis ReEngage child theme.
  *
- * @package Genesis Sample
+ * @package Genesis ReEngage
  * @author  StudioPress
  * @license GPL-2.0-or-later
- * @link    https://my.studiopress.com/themes/genesis-sample/
+ * @link    https://my.studiopress.com/themes/genesis-reengage/
  */
 
 /**
@@ -18,6 +18,6 @@ return [
 		],
 	],
 	'extras' => [
-		'media_query_width' => '960px',
+		'media_query_width' => '760px',
 	],
 ];

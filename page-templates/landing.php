@@ -1,47 +1,45 @@
 <?php
 /**
- * Genesis Sample.
+ * Genesis ReEngage.
  *
- * This file adds the landing page template to the Genesis Sample Theme.
+ * This file adds the landing page template to the Genesis ReEngage Theme.
  *
  * Template Name: Landing
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Genesis ReEngage
+ * @author  Joshua Allen Shaw
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
-add_filter( 'body_class', 'genesis_sample_landing_body_class' );
 /**
  * Adds landing page body class.
  *
  * @since 1.0.0
  *
- * @param array $classes Original body classes.
+ * @param  array $classes Original body classes.
  * @return array Modified body classes.
  */
-function genesis_sample_landing_body_class( $classes ) {
-
+function genesis_reengage_landing_body_class( $classes ) {
 	$classes[] = 'landing-page';
 	return $classes;
 
 }
+add_filter( 'body_class', 'genesis_reengage_landing_body_class' );
 
 // Removes Skip Links.
 remove_action( 'genesis_before_header', 'genesis_skip_links', 5 );
 
-add_action( 'wp_enqueue_scripts', 'genesis_sample_dequeue_skip_links' );
 /**
  * Dequeues Skip Links Script.
  *
  * @since 1.0.0
  */
-function genesis_sample_dequeue_skip_links() {
-
+function genesis_reengage_dequeue_skip_links() {
 	wp_dequeue_script( 'skip-links' );
 
 }
+add_action( 'wp_enqueue_scripts', 'genesis_reengage_dequeue_skip_links' );
 
 // Removes site header elements.
 remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );

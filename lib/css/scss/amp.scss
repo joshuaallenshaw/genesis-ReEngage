@@ -1,10 +1,8 @@
-/*
-Genesis AMP styling.
-This currently loads only on AMP pages.
-*/
+// Genesis AMP styling.
+// This currently loads only on AMP pages.
 
-/* Reveals the submenu upon parent hover.
---------------------------------------------- */
+
+// Reveals the submenu upon parent hover.
 .genesis-nav-menu .menu-item .sub-menu {
 	display: block;
 	transform: scaleY(0);
@@ -17,22 +15,21 @@ This currently loads only on AMP pages.
 	transform: scaleY(1);
 }
 
-/* Reveals the submenu upon tabbing with keyboard.
---------------------------------------------- */
+// Reveals the submenu upon tabbing with keyboard.
 
-/*
- * :focus-within needs its own selector.
- * Why? If the event a browser does not recognize this pseudo-class, only this
- * selector and its declarations are ignored. Isolating it ensures the submenu
- * animation works on :hover.
- */
+//
+// :focus-within needs its own selector.
+// Why? If the event a browser does not recognize this pseudo-class,
+// only this selector and its declarations are ignored.
+// Isolating it ensures the submenu animation works on :hover.
+
 .menu .menu-item:focus-within > .sub-menu {
 	transform: scaleY(1);
 	left: auto;
 	opacity: 1;
 }
 
-/* Overrides for different breakpoint to follow non-AMP implementation. */
+// Overrides for different breakpoint to follow non-AMP implementation.
 @media only screen and (max-width: 959px) {
 
 	.genesis-responsive-menu {

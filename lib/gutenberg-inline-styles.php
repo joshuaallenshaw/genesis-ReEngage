@@ -2,30 +2,24 @@
 /**
  * Adds front-end inline styles for the custom Gutenberg color palette.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Genesis ReEngage
+ * @author  Joshua Allen Shaw
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
-add_action( 'wp_enqueue_scripts', 'genesis_sample_custom_gutenberg_css' );
+add_action( 'wp_enqueue_scripts', 'genesis_reengage_custom_gutenberg_css' );
 /**
  * Outputs front-end inline styles based on colors declared in config/appearance.php.
  *
  * @since 2.9.0
  */
-function genesis_sample_custom_gutenberg_css() {
-
+function genesis_reengage_custom_gutenberg_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover {
-	color: {$appearance['link-color']};
-}
-
-.site-container .wp-block-button .wp-block-button__link {
-	background-color: {$appearance['link-color']};
-}
+.ab-block-post-grid .ab-post-grid-items h2 a:hover { color: {$appearance['link-color']}; }
+.site-container .wp-block-button .wp-block-button__link { background-color: {$appearance['link-color']}; }
 
 .wp-block-button .wp-block-button__link:not(.has-background),
 .wp-block-button .wp-block-button__link:not(.has-background):focus,
@@ -43,14 +37,14 @@ function genesis_sample_custom_gutenberg_css() {
 }
 CSS;
 
-	$css .= genesis_sample_inline_font_sizes();
-	$css .= genesis_sample_inline_color_palette();
+	$css .= genesis_reengage_inline_font_sizes();
+	$css .= genesis_reengage_inline_color_palette();
 
 	wp_add_inline_style( genesis_get_theme_handle() . '-gutenberg', $css );
 
 }
 
-add_action( 'enqueue_block_editor_assets', 'genesis_sample_custom_gutenberg_admin_css' );
+add_action( 'enqueue_block_editor_assets', 'genesis_reengage_custom_gutenberg_admin_css' );
 /**
  * Outputs back-end inline styles based on colors declared in config/appearance.php.
  *
@@ -59,8 +53,7 @@ add_action( 'enqueue_block_editor_assets', 'genesis_sample_custom_gutenberg_admi
  *
  * @since 2.9.0
  */
-function genesis_sample_custom_gutenberg_admin_css() {
-
+function genesis_reengage_custom_gutenberg_admin_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$css = <<<CSS
@@ -96,8 +89,7 @@ CSS;
  *
  * @return string The CSS for editor font sizes if theme support was declared.
  */
-function genesis_sample_inline_font_sizes() {
-
+function genesis_reengage_inline_font_sizes() {
 	$css               = '';
 	$editor_font_sizes = get_theme_support( 'editor-font-sizes' );
 
@@ -124,8 +116,7 @@ CSS;
  *
  * @return string The editor colors CSS if `editor-color-palette` theme support was declared.
  */
-function genesis_sample_inline_color_palette() {
-
+function genesis_reengage_inline_color_palette() {
 	$css                  = '';
 	$appearance           = genesis_get_config( 'appearance' );
 	$editor_color_palette = $appearance['editor-color-palette'];

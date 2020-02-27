@@ -2,7 +2,7 @@
 # This file is distributed under the GPL-2.0-or-later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Sample 3.2.0\n"
+"Project-Id-Version: Genesis ReEngage 3.2.0\n"
 "Report-Msgid-Bugs-To: StudioPress <translations@studiopress.com>\n"
 "POT-Creation-Date: 2019-11-12 16:53:34+00:00\n"
 "MIME-Version: 1.0\n"
@@ -158,23 +158,23 @@ msgid "Simple Contact Form"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "Genesis Sample"
+msgid "Genesis ReEngage"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://demo.studiopress.com/"
+msgid "https://github.com/joshuaallenshaw/genesis-ReEngage"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "This is the sample theme created for the Genesis Framework."
+msgid "This is the theme built from the sample theme created for the Genesis Framework."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "StudioPress"
+msgid "Joshua Allen Shaw"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.studiopress.com/"
+msgid "https://www.joshuaallenshaw.com/"
 msgstr ""
 
 #. Template Name of the plugin/theme

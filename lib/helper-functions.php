@@ -1,13 +1,13 @@
 <?php
 /**
- * Genesis Sample.
+ * Genesis ReEngage.
  *
- * This file adds the required helper functions used in the Genesis Sample Theme.
+ * This file adds the required helper functions used in the Genesis ReEngage Theme.
  *
- * @package Genesis Sample
- * @author  StudioPress
+ * @package Genesis ReEngage
+ * @author  Joshua Allen Shaw
  * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
+ * @link    https://github.com/joshuaallenshaw/genesis-ReEngage
  */
 
 /**
@@ -15,11 +15,10 @@
  *
  * @since 2.2.3
  *
- * @param string $color A color in hex format.
+ * @param  string $color A color in hex format.
  * @return string The hex code for the most contrasting color: dark grey or white.
  */
-function genesis_sample_color_contrast( $color ) {
-
+function genesis_reengage_color_contrast( $color ) {
 	$hexcolor = str_replace( '#', '', $color );
 	$red      = hexdec( substr( $hexcolor, 0, 2 ) );
 	$green    = hexdec( substr( $hexcolor, 2, 2 ) );
@@ -37,12 +36,11 @@ function genesis_sample_color_contrast( $color ) {
  *
  * @since 2.2.3
  *
- * @param string $color A color in hex format.
- * @param int    $change The amount to reduce or increase brightness by.
+ * @param  string $color  A color in hex format.
+ * @param  int    $change The amount to reduce or increase brightness by.
  * @return string Hex code for the adjusted color brightness.
  */
-function genesis_sample_color_brightness( $color, $change ) {
-
+function genesis_reengage_color_brightness( $color, $change ) {
 	$hexcolor = str_replace( '#', '', $color );
 
 	$red   = hexdec( substr( $hexcolor, 0, 2 ) );
