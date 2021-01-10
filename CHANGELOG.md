@@ -1,5 +1,44 @@
 # Genesis Sample Theme Changelog
 
+## [3.4.0] - 2020-10-20
+Genesis Sample 3.4.0 requires the Genesis Blocks plugin.
+
+* Changed: Install Genesis Blocks instead of Atomic Blocks during one-click theme setup.
+* Changed: Updated one-click-theme-setup content to use Genesis Blocks.
+* Changed: Updated Editor and front-end styles for Genesis Blocks compatibility.
+
+## [3.3.1] - 2020-08-17
+
+### Added
+* WordPress 5.5 block editor theme support for `custom-line-height`.
+* WordPress 5.5 block editor theme support for `custom-units`.
+* WordPress 5.5 HTML5 theme support for `navigation-widgets`.
+
+### Changed
+* Ensure front end paragraph margin matches the editor.
+* Ensure block width in the editor matches the front end.
+
+### Fixed
+* Ensure the hamburger menu button icon and text CSS transitions match.
+
+### Removed
+* `genesis-lazy-load-images` theme support in favor of the WordPress 5.5 lazy loading feature.
+
+## [3.3.0] - 2020-04-07
+Requires WordPress 5.4 or higher.
+
+### Added
+* CSS to adjust left padding for WordPress 5.4 Social Icons.
+* Editor styles to ensure theme colors work for inline text colors.
+* Editor styles for WordPress 5.4 compatibility, including link color, buttons, headings, and lists.
+
+### Changed
+* Updated one-click theme setup content to include WordPress 5.4 button markup.
+* Update developer dependencies. ([GitHub version](https://github.com/studiopress/genesis-sample/) only.)
+
+### Removed
+* Unused `light` heading class.
+
 ## [3.2.0] - 2019-11-13
 
 ### Added
@@ -17,7 +56,7 @@
 * CSS for tables for better consistency between editor and front end and to allow for new WordPress 5.3 settings.
 * Allow footer widgets to be displayed on the landing page template.
 * Set imported landing page meta to hide footer widgets. Requires Genesis 3.2 or higher.
-* Update homepage content import to use Atomic Blocks Adanced Columns block.
+* Update homepage content import to use Atomic Blocks Advanced Columns block.
 * Update the phpcs config to exclude a PHP short array rule intended only for WordPress core.
 
 ### Fixed
@@ -87,7 +126,7 @@ Requires Genesis 2.10.0+.
 * Changed: improve editor button block styling.
 * Changed: clarify wording of Customizer color labels.
 * Changed: remove matchHeight script and use CSS flex instead to match heights of WooCommerce product lists.
-* Fixed: WooCommmerce shop pages now use the selected page layout instead of the default site layout on sites using object caching.
+* Fixed: WooCommerce shop pages now use the selected page layout instead of the default site layout on sites using object caching.
 * Fixed: update the `npm run zip` script to prevent an issue with zip decompression for apps such as Path Finder. (npm scripts are available in the version of Genesis Sample on GitHub: https://github.com/studiopress/genesis-sample/).
 
 ## [2.9.1] - 2019-03-19
@@ -179,7 +218,7 @@ Requires Genesis 2.8.0+.
 * Update to normalize.css 4.1.1.
 
 ## [2.2.3] - 2016-05-18
-* Add accessibile mobile menu.
+* Add accessible mobile menu.
 * Add accessibility support for the 404 Page.
 * Add the custom header option to upload your own logo.
 * Add customizer option for primary color.
