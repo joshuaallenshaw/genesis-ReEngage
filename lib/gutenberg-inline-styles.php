@@ -18,7 +18,7 @@ function genesis_reengage_custom_gutenberg_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover { color: {$appearance['link-color']}; }
+.gb-block-post-grid .gb-post-grid-items h2 a:hover { color: {$appearance['link-color']}; }
 .site-container .wp-block-button .wp-block-button__link { background-color: {$appearance['link-color']}; }
 
 .wp-block-button .wp-block-button__link:not(.has-background),
@@ -57,7 +57,7 @@ function genesis_reengage_custom_gutenberg_admin_css() {
 	$appearance = genesis_get_config( 'appearance' );
 
 	$css = <<<CSS
-.ab-block-post-grid .ab-post-grid-items h2 a:hover,
+.gb-block-post-grid .gb-post-grid-items h2 a:hover,
 .block-editor__container .editor-block-list__block a {
 	color: {$appearance['link-color']};
 }

@@ -17,7 +17,7 @@
 * CSS for tables for better consistency between editor and front end and to allow for new WordPress 5.3 settings.
 * Allow footer widgets to be displayed on the landing page template.
 * Set imported landing page meta to hide footer widgets. Requires Genesis 3.2 or higher.
-* Update homepage content import to use Atomic Blocks Adanced Columns block.
+* Update homepage content import to use Genesis Blocks Adanced Columns block.
 * Update the phpcs config to exclude a PHP short array rule intended only for WordPress core.
 
 ### Fixed

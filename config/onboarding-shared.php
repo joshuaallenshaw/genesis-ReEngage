@@ -16,9 +16,9 @@
 return [
 	'plugins'          => [
 		[
-			'name'       => __( 'Atomic Blocks', 'genesis-reengage' ),
-			'slug'       => 'atomic-blocks/atomicblocks.php',
-			'public_url' => 'https://atomicblocks.com/',
+			'name'       => __( 'Genesis Blocks', 'genesis-reengage' ),
+			'slug'       => 'genesis-blocks/genesisblocks.php',
+			'public_url' => 'https://studiopress.com/',
 		],
 		[
 			'name'       => __( 'Simple Social Icons', 'genesis-reengage' ),
